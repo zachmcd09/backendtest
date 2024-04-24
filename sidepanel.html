@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RamBot</title>
+  <link rel="stylesheet" href="css/sidepanel1.css">
+</head>
+<body>
+  <h1>RamBot Rodney</h1>
+  <p id="Team_Description">VCU Senior Capstone Team: CS 24-331</p>
+  <p id="RamBot_Description">Powered by GPT-4</p>
+  <img id="rambotImage" src="icons/rambot_rodney.png" alt="RamBot"> <!-- Replace with the correct path -->
+  <div class="input-container">
+    <input type="text" id="textInput" placeholder="Enter text...">
+    <button id="sendDataButton">Send</button>
+  </div>
+
+  <div id="responseContainer"></div> <!-- This div will hold the response -->
+
+  <script type="module" src="scripts/sendToOpenAI.js"></script> 
+</body>
+</html>
