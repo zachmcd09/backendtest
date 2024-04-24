@@ -24,33 +24,7 @@ app.use(
   })
 );
 
-// Function to send data to the OpenAI API
-const sendToOpenAI = async (inputText) => {
-  const apiKey = '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'; // Replace with your OpenAI API key
-  const apiUrl = 'https://api.openai.com/v1/completions';
 
-  try {
-    const response = await fetch(apiUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${apiKey}`
-      },
-      body: JSON.stringify({
-        prompt: inputText,
-        model: "text-davinci-003",
-        max_tokens: 150 // Adjust as needed
-      })
-    });
-
-    const responseData = await response.json();
-    console.log('Response from OpenAI:', responseData);
-    return responseData; // Return the response data
-  } catch (error) {
-    console.error('Error sending data to OpenAI:', error);
-    throw error; // Throw the error to handle it later
-  }
-};
 
 
 
